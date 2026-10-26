@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Tipoff",
+  "version": "1.1",
+  "description": "Smart NBA game tracker, live scores, alerts, and standings.",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://site.api.espn.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

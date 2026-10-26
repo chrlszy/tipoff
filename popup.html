@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipoff</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hero-header">
+    <div class="top-bar">
+      <div class="app-title-group">
+        <h2>Tipoff <span id="live-pulse" class="pulse-dot"></span></h2>
+        <span>NBA Game Center</span>
+      </div>
+    </div>
+
+    <svg class="net-art" viewBox="0 0 60 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="22" y="0" width="38" height="22" rx="0" fill="#ffffff" fill-opacity="0.95" />
+      <rect x="30" y="5" width="22" height="12" rx="1.5" stroke="#ff3838" stroke-width="2" />
+      <path d="M12 22H52" stroke="#ff3838" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M15 22 L23 44 L32 22 L41 44 L49 22" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19 30 L45 30" stroke="#ffffff" stroke-width="1.5" />
+      <path d="M22 38 L42 38" stroke="#ffffff" stroke-width="1.5" />
+      <path d="M26 44 L38 44" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+    </svg>
+
+    <div class="date-row" id="date-strip"></div>
+  </div>
+
+  <div class="sheet-content">
+    <div class="nav-toggle">
+      <button class="nav-btn active" id="tab-matches-btn">MATCHUPS</button>
+      <button class="nav-btn" id="tab-standings-btn">STANDINGS</button>
+      <button class="nav-btn" id="tab-picker-btn">MY TEAMS</button>
+    </div>
+
+    <div id="view-matches">
+      <div class="sub-filter-row">
+        <span style="font-size: 10px; font-weight: 700; color: var(--text-muted);">DISPLAY FILTER</span>
+        <div class="filter-pills">
+          <button class="filter-btn active" id="filter-tracked-btn">My Teams</button>
+          <button class="filter-btn" id="filter-all-btn">All League</button>
+        </div>
+      </div>
+      <div class="game-list" id="games-container">
+        <div class="empty-msg">Loading matchups...</div>
+      </div>
+    </div>
+
+    <div id="view-standings" class="view-hidden">
+      <div class="standings-list" id="standings-container">
+        <div class="empty-msg">Loading standings...</div>
+      </div>
+    </div>
+
+    <div id="view-picker" class="view-hidden">
+      <input type="text" id="team-filter" class="search-box" placeholder="Search NBA teams..." />
+      <div id="team-list" class="team-picker-grid"></div>
+      <button class="save-btn" id="save-teams-btn">Update Tracked Teams</button>
+    </div>
+
+    <div class="footer-bar">
+      <button id="footer-pitsport-btn" class="footer-link-btn">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        View Programs on Pitsport
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
